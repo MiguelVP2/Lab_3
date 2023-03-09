@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance {get; private set;}
     public GameObject cat;
-    public GameObject player;
+    public GameObject Player;
     // Start is called before the first frame update
     void Awake() {
         if (Instance == null) {
@@ -18,15 +18,15 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public Vector2 getPos(){
-        print("gamemanager called");
-        positionNumber += 1;
-        return posList[(positionNumber - 1)];
-    }
+    //public Vector2 getPos(){
+        //print("gamemanager called");
+        //positionNumber += 1;
+        //return posList[(positionNumber - 1)];
+    //}
 
     public void StopGame(){
-        npc.GetComponent<EnemyMovement>().StopMoving();
-        player.GetComponent<Player>().StopMoving();
+        //npc.GetComponent<EnemyMovement>().StopMoving();
+        //player.GetComponent<Player>().StopMoving();
     }
     
     void Start()
