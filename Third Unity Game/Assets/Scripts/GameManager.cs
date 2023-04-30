@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance {get; private set;}
     public GameObject cat;
     public GameObject Player;
+    public GameObject ending;
     // Start is called before the first frame update
     void Awake() {
         if (Instance == null) {
@@ -27,6 +28,15 @@ public class GameManager : MonoBehaviour
     public void StopGame(){
         //npc.GetComponent<EnemyMovement>().StopMoving();
         //player.GetComponent<Player>().StopMoving();
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "enemy")
+        {
+            //nstance.Scene
+            print("colided");
+        }
     }
     
     void Start()
