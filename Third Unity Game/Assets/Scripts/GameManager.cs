@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -13,6 +14,9 @@ public class GameManager : MonoBehaviour
     public GameObject cat6;
     public GameObject Player;
     public GameObject ending;
+    public GameObject dialogBox;
+    public TextMeshProUGUI dialogText;
+    public string text;
     // Start is called before the first frame update
     void Awake() {
         if (Instance == null) {
@@ -22,6 +26,24 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
 
+    }
+
+    public void DialogShow(string text) {
+        dialogBox.SetActive(true);
+        StopAllCoroutines();
+        StartCoroutine(TypeText(text));
+    }
+
+    public void DialogHide() {
+        dialogBox.SetActive(false);
+    }
+
+    IEnumerator TypeText(string text) {
+        dialogText.text = "";
+        foreach (char c in text.ToCharArray()) {
+            dialogText.text += c;
+            yield return new WaitForSeconds(0.02f);
+        }
     }
 
     //public Vector2 getPos(){
@@ -37,13 +59,23 @@ public class GameManager : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "enemy")
-        {
+        //if(collision.gameObject.tag == "enemy")
+        //{
             //nstance.Scene
-            print("colided");
+            //print("colided");
+        //}
+    }
+
+    public void OnTriggerEnter2D(Collider2D collider2D) {
+        print("Found..");
+        if (collider2D.gameObject.CompareTag("info")) {
+            GameManager.Instance.DialogShow(text);
+        }
+        if (collider2D.gameObject.CompareTag("enemy")) {
+            //SceneLoader.Instance.LoadScene("GameOver");
         }
     }
-    
+
     void Start()
     {
         
