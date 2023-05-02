@@ -6,6 +6,11 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance {get; private set;}
     public GameObject cat;
+    public GameObject cat2;
+    public GameObject cat3;
+    public GameObject cat4;
+    public GameObject cat5;
+    public GameObject cat6;
     public GameObject Player;
     public GameObject ending;
     // Start is called before the first frame update
