@@ -68,11 +68,16 @@ public class GameManager : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collider2D) {
         print("Found..");
-        if (collider2D.gameObject.CompareTag("info")) {
-            GameManager.Instance.DialogShow(text);
-        }
         if (collider2D.gameObject.CompareTag("enemy")) {
             //SceneLoader.Instance.LoadScene("GameOver");
+            //SceneLoader.Instance.LoadScene("GameOver");
+            print("lol");
+        }
+    }
+
+    public void OnTriggerExit2D(Collider2D collider2D){
+        if(collider2D.gameObject.CompareTag("Player")){
+            print("uwu");
         }
     }
 

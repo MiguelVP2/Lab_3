@@ -7575,6 +7575,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1532992547665298264, guid: 3b87d2b8d5ecb6046974368d764d1c97, type: 3}
+      propertyPath: m_ColliderPaths.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1532992547665298265, guid: 3b87d2b8d5ecb6046974368d764d1c97, type: 3}
       propertyPath: m_Name
       value: Cat
@@ -7589,11 +7593,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1532992547665298269, guid: 3b87d2b8d5ecb6046974368d764d1c97, type: 3}
       propertyPath: m_BodyType
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1532992547665298270, guid: 3b87d2b8d5ecb6046974368d764d1c97, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1532992547665298271, guid: 3b87d2b8d5ecb6046974368d764d1c97, type: 3}
       propertyPath: m_RootOrder
@@ -7647,5 +7651,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1532992547665298267, guid: 3b87d2b8d5ecb6046974368d764d1c97, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3b87d2b8d5ecb6046974368d764d1c97, type: 3}
